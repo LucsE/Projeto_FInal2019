@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(248, 245, 245);
+}
+.cor{
+  background-color: rgb(252, 248, 248);
+}
+.margem-20{
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding: 20px
+}
+.margem-20_2{
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding: 30px
+}
+.caixa{
+    background-color: white;
+}
+.centro{
+    text-align: center;
+}
+.altura{
+    height: 50px;
+}
