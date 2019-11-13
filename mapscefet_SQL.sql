@@ -12,19 +12,18 @@ use mapa_cefet;
 -- --------------------------------------------------------
 
 #DROP TABLE IF EXISTS `info_sala`;
-CREATE TABLE IF NOT EXISTS `info_sala` (
-  `identificacao` varchar(10) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `departamento` varchar(45)  NOT NULL,
-  `localizacao` VARCHAR(200),
-  `ponto_de_referencia` VARCHAR(200),
-  `responsavel` varchar(90) NOT NULL,
-  `descricao` varchar(580) NOT NULL,
-  `telefone` varchar(9),
-  `horario_funcionamento` VARCHAR(100) NOT NULL,
-  
-  PRIMARY KEY (`identificacao`)
-);
+CREATE TABLE `Informacoes_Sala` (
+  `identificacao` varchar(5) NOT NULL,
+  `nome` text NOT NULL,
+  `departamento` text NOT NULL,
+  `responsavel` text,
+  `definicao` text NOT NULL,
+  `utilizacao` text NOT NULL,
+  `localizacao` text NOT NULL,
+  `telefone` text,
+  `horario_funcionamento` text 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+COMMIT;
 
 
 #DROP TABLE IF EXISTS `imagens`;
