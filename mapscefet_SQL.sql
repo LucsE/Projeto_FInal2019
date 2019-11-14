@@ -12,13 +12,14 @@ use mapa_cefet;
 -- --------------------------------------------------------
 
 #DROP TABLE IF EXISTS `info_sala`;
-CREATE TABLE `Informacoes_Sala` (
+CREATE TABLE `Sala` (
   `identificacao` varchar(5) NOT NULL,
   `nome` text NOT NULL,
   `departamento` text NOT NULL,
   `responsavel` text,
   `definicao` text NOT NULL,
   `utilizacao` text NOT NULL,
+  `como_chegar` text NOT NULL,
   `localizacao` text NOT NULL,
   `telefone` text,
   `horario_funcionamento` text 
@@ -39,3 +40,6 @@ CREATE TABLE IF NOT EXISTS `imagens` (
 );
 
 #select*from imagens;
+
+create or replace view Sala_Descricao as select definicao,utilizacao,como_chegar from Sala;
+create or replace Sala_Ficha as select identificacao,nome,departamento,responsavel,localizacao,horario_funcionamente from Sala;
